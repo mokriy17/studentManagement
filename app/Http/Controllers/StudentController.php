@@ -31,8 +31,8 @@ class StudentController extends Controller
     }
     public function show(string $id): View
     {
-        $student = Student::find($id);
-        return view('students.show')->with('students', $student);
+        $students = Student::find($id);
+        return view('students.show')->with('students', $students);
     }
     public function edit(string $id): View
     {
